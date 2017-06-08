@@ -2,6 +2,6 @@ Farmers Market App
 ======
 
 
-![Demo](http://i.imgur.com/oSGeIfc.gifv)
+[Imgur](http://i.imgur.com/oSGeIfc.gifv)
 
 
