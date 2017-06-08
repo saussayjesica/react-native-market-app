@@ -1,1 +1,4 @@
-Farmers Market App
+## Farmers Market App
+
+![Demo](http://i.imgur.com/oSGeIfc.gifv)
+
