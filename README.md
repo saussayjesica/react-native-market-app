@@ -2,5 +2,5 @@ Farmers Market App
 ======
 
 
-![Preview GIF](http://i.imgur.com/oSGeIfc.gifv)
+[Preview GIF](http://i.imgur.com/oSGeIfc.gifv)
 
