@@ -17,6 +17,8 @@ Users saved favourite markets
 ---
 ![](http://i.imgur.com/SLUdXDt.png)
 
+Selected Market Information / Hours / Rate or Add to Favourites (carousel) 
+---
 ![](http://i.imgur.com/Sd4sVjS.png)
 
 ![](http://i.imgur.com/8aD5rMr.png)
