@@ -8,10 +8,10 @@ import {
 import Carousel from 'react-native-snap-carousel';
 import { MapView } from 'expo';
 
-import RateMarket from './RateMarket'
 import MarketHours from './MarketHours'
 import MarketInfo from './MarketInfo'
 import MarketLocation from './MarketLocation'
+import MarketRateAndFav from './MarketRateAndFav'
 
 const horizontalMargin = 20;
 const slideWidth = 280;
@@ -22,7 +22,10 @@ const itemHeight = 200;
 
 
 export default class MarketCarousel extends Component{
+
+
   render(){
+    const id = this.props.navigation.state.params.id;
     const { width: viewportWidth, height: viewportHeight } = Dimensions.get('window');
     const { name, address, suburb, state, postcode, rating, totalRatings, latitude, longitude, phone, website, hours, other } = this.props.navigation.state.params;
     return (
@@ -36,8 +39,6 @@ export default class MarketCarousel extends Component{
           itemWidth={itemWidth}
           firstItem={1}
           containerCustomStyle={{position:'absolute', bottom: 10}}
-          // inactiveSlideOpacity={1}
-          // inactiveSlideScale={1}
         >
           <View style={styles.slide}>
             <MarketHours
@@ -48,8 +49,10 @@ export default class MarketCarousel extends Component{
             data={this.props.navigation.state.params}/>
           </View>
           <View style={styles.slide}>
-            <RateMarket
-            data={5}/>
+            <MarketRateAndFav
+            data={this.props.navigation.state.params}
+            marketId={id}
+            rating={rating}/>
           </View>
         </Carousel>
       </View>

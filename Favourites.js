@@ -33,8 +33,16 @@ export default class Market extends Component {
     this.props.navigation.navigate('MarketCarousel', { ...market, id });
   };
 
-
-
+  favouriteMarkets(){
+    let favouriteMarkets = [];
+    const markets = _.map(this.state.markets, (market, id) => {
+      if (market.favourite) {
+        favouriteMarkets.push(market)
+      }
+    })
+    return favouriteMarkets
+    console.log(favouriteMarkets)
+  }
 
   render() {
     const markets = this.state.markets
@@ -42,15 +50,15 @@ export default class Market extends Component {
     return (
       <ScrollView>
         <List style={styles.list}>
-            {_.map(this.state.markets, (market, id) => (
-              <ListItem
-                key={id}
-                roundAvatar
-                avatar={{ uri: market.thumbnail }}
-                title={market.name}
-                subtitle={market.suburb}
-                onPress={() => this.onLearnMore(market, id)}
-              />
+            {_.map(this.favouriteMarkets(), (market, id) => (
+                    <ListItem
+                      key={id}
+                      roundAvatar
+                      avatar={{ uri: market.thumbnail }}
+                      title={market.name}
+                      subtitle={market.suburb}
+                      onPress={() => this.onLearnMore(market, id)}
+                    />
             ))}
         </List>
       </ScrollView>

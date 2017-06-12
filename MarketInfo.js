@@ -11,7 +11,6 @@ import Rating from './Rating'
 export default class MarketInfo extends Component {
   render() {
     const { name, address, suburb, state, postcode, rating, totalRatings, latitude, longitude, phone, website } = this.props.data
-    console.log(name)
     return (
         <View style={styles.container}>
           <Text style={styles.title}>{name.toUpperCase()}</Text>
@@ -29,6 +28,7 @@ export default class MarketInfo extends Component {
 
 const styles = StyleSheet.create({
   container: {
+    borderRadius: 8,
     height: 200,
     backgroundColor: '#FFF',
     alignItems: 'center',

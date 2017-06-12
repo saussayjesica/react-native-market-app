@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text, Image, TouchableHighlight, StyleSheet } from 'react-native';
+import db from './lib/database'
+
+const UserData = db.ref('UserData')
+
 
 export default class FavouriteButton extends Component {
   constructor(){
@@ -11,16 +15,20 @@ export default class FavouriteButton extends Component {
   }
 
   handlePress = () => {
-    if(!this.state.favourite) {
-      this.setState({
+    if (!this.state.favourite) {
+      (this.setState({
         uri: require('./assets/images/favorite-red.png'),
-        favourite: true,
-      })
-    } else if (this.state.favourite) {
-      this.setState({
+        favourite: true
+      })),
+      (UserData.child(this.props.marketId).child('favourite')
+      .transaction(favourite => favourite = true))
+    } else if (this.props.status) {
+      (this.setState({
         uri: require('./assets/images/favorite-grey.png'),
-        favourite: false,
-      })
+        favourite: false
+      })),
+      (UserData.child(this.props.marketId).child('favourite')
+      .transaction(favourite => favourite = false))
     }
   }
 

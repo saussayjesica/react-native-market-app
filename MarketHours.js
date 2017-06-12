@@ -5,7 +5,6 @@ import {
   Image,
   Text
 } from 'react-native';
-
 import { FontAwesome } from '@expo/vector-icons';
 
 import Rating from './Rating'
@@ -15,7 +14,6 @@ export default class MarketInfo extends Component {
 
   render() {
     const { hours, other, phone } = this.props.data
-    console.log(hours.mon)
     return (
         <View style={styles.container}>
           <Text style={styles.title}>HOURS</Text>
@@ -41,6 +39,7 @@ export default class MarketInfo extends Component {
 const styles = StyleSheet.create({
   container: {
     height: 200,
+    borderRadius: 8,
     backgroundColor: '#FFF',
     alignItems: 'center',
     justifyContent: 'flex-start',
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
   },
   weekdayImage: {
   marginRight: 3,
-  width: 25,
-  height: 25
+  width: 30,
+  height: 30
   }
 });
