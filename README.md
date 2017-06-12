@@ -3,6 +3,8 @@ Farmers Market App
 
 I'm building a React Native app that helps users find Farmers Markets around Sydney. I'm building it for both IOS & Android and I'm using Firebase to store all my data. It's still a work in progress...
 
+Preview it here: [Market App GIF](http://i.imgur.com/nJEyfVb.gifv)
+
 Here's some screengrabs from the current version
 
 List of markets around Sydney
@@ -25,5 +27,5 @@ Selected Market Information / Hours / Rate or Add to Favourites (carousel)
 ---
 ![](http://i.imgur.com/j1gU1KO.png)
 
-Preview it here: [Market App GIF](http://i.imgur.com/oSGeIfc.gifv)
+
 
