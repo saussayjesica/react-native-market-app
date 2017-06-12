@@ -20,9 +20,9 @@ Users saved favourite markets
 Selected Market Information / Hours / Rate or Add to Favourites (carousel) 
 ---
 ![](http://i.imgur.com/Sd4sVjS.png)
-
+---
 ![](http://i.imgur.com/8aD5rMr.png)
-
+---
 ![](http://i.imgur.com/j1gU1KO.png)
 
 Preview it here: [Market App GIF](http://i.imgur.com/oSGeIfc.gifv)
