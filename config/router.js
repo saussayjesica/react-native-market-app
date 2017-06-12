@@ -7,11 +7,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import MapGPS from '../MapGPS'
 import Markets from '../Markets'
-import MarketInfo from '../MarketInfo'
-import RateMarket from '../RateMarket'
+import Favourites from '../Favourites'
+import MarketRateAndFav from '../MarketRateAndFav'
 import MarketCarousel from '../MarketCarousel'
 
-export const MapStack = StackNavigator({
+export const MarketStack = StackNavigator({
   Markets: {
     screen: Markets,
     navigationOptions: {
@@ -27,16 +27,31 @@ export const MapStack = StackNavigator({
   }
 })
 
+export const FavouriteStack = StackNavigator({
+  Favourites: {
+    screen: Favourites,
+    navigationOptions: {
+      title: 'Favourites',
+      headerStyle:{ backgroundColor: '#FFF'},
+    }
+  },
+  FavMarketCarousel: {
+    screen: MarketCarousel,
+    navigationOptions: ({ navigation }) => ({
+      title: `${navigation.state.params.name.toUpperCase()}`,
+    }),
+  }
+})
+
 export const Tabs = TabNavigator({
   MarketInfo: {
-    screen: MapStack,
+    screen: MarketStack,
     tabBarOptions: {
       tintColor: '#FFF',
     },
     navigationOptions: {
       tabBarLabel: 'Markets',
       tabBarIcon: ({ tintColor }) => <Entypo name="shop" size={24} color={tintColor} />,
-
     }
   },
   MapGPS: {
@@ -46,8 +61,11 @@ export const Tabs = TabNavigator({
         tabBarIcon: ({ tintColor }) => <Ionicons name="ios-map-outline" size={24} color={tintColor} />
     }
   },
-  RateMarket: {
-    screen: RateMarket,
+  Favourites: {
+    screen: FavouriteStack,
+    tabBarOptions: {
+      tintColor: '#FFF',
+    },
     navigationOptions: {
       tabBarLabel: 'Favourites',
       tabBarIcon: ({ tintColor }) => <Ionicons name="md-star" size={26} color={tintColor} />
