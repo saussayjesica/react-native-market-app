@@ -11,28 +11,32 @@ I'm building a React Native app that helps users locate farmer's markets around 
 [Market App GIF](http://i.imgur.com/nJEyfVb.gifv)
 
 ## Screen Grabs
-List of markets around Sydney
----
+
+##### List of markets around Sydney
 ![](http://i.imgur.com/5TmuFS4.png) 
 
 
-Users geolocation with markers pinned to the map that list local markets
----
+
+##### Users geolocation with markers pinned to the map that list local markets
+
 ![](http://i.imgur.com/pNdaqbd.png)
 
 
-Users saved favourite markets 
----
+
+##### Users saved favourite markets 
+
 ![](http://i.imgur.com/SLUdXDt.png)
 
 
-Selected Market Information / Hours / Rate or Add to Favourites (carousel) 
----
+##### Selected Market Information / Hours / Rate or Add to Favourites (carousel) 
+
 ![](http://i.imgur.com/Sd4sVjS.png)
 ---
 
+
 ![](http://i.imgur.com/8aD5rMr.png)
 ---
+
 
 ![](http://i.imgur.com/j1gU1KO.png)
 
